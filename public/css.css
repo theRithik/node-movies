@@ -1,0 +1,11 @@
+.form{
+    border-radius: 30px;
+    width: 500px;
+    margin-left: 300px;
+    border: 1px solid rgb(236, 232, 232);
+    padding: 30px;
+
+}
+.form-control{
+    margin-bottom: 10px;
+}
