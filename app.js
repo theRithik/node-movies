@@ -39,6 +39,27 @@ app.get('/list',(req,response)=>{
         .catch((err)=>{console.log(err)})
    
 })
+
+
+app.post('/postData',(req,response)=>{
+    const date = new Date()
+    const url = " http://localhost:3000/movies"
+    req.body.date = date
+
+    axios.post(url, req.body,{
+        headers:{
+            'Content-Type':'application/json'
+        }
+    })
+    .then((res)=>{
+        response.redirect('/list')
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+})
+
+
 app.listen(4000,()=>{
     console.log('in port 4000')
 })
